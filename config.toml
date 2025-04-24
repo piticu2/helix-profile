@@ -1,0 +1,45 @@
+#theme = "onedark"
+theme = "pop-dark"
+
+[editor]
+line-number = "relative" #valores relativos en lineas
+mouse = false #evita usar el ratón
+end-of-line-diagnostics = "hint" #avisar de errores
+cursorline = true #resaltar linea del cursor
+
+#Mostrar errores en la misma línea
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+#autocompletar según el lenguaje
+[editor.lsp]
+display-inlay-hints = true #consejos en linea del cursor, mientras vas escribiendo
+
+#cómo se ve visualmente el cursor
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+#Cerrar corchetes y demás
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+"'" = "'"
+'`' = '`'
+'<' = '>'
+
+#Mostrar un caracter para agrupar corchetes y demás
+[editor.indent-guides]
+render = true #permitir ver el caracter
+character = "╎" #el caracter de cada nivel de anidación
+#mostrar incluso en el primer if anidado
+skip-levels = 0
+
+[editor.soft-wrap]
+enable = true # cuando no quepan las ultimas palabras en la linea porque la ventana es demasiado pequeña, crear multilinea
+max-wrap = 25 # dividir linea cuando no quepan 25 posiciones al final
+max-indent-retain = 0
+wrap-indicator = ""  # indicador de salto de línea virtual, ocultarlo
